@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница 1</title>
+</head>
+
+<body>
+    <!-- Задание 1. Используя поиск по id, получите ссылку с текстом link4
+    и выведите ее в консоль. -->
+    <a href="#">link1</a>
+    <a href="#">link2</a>
+    <a href="#">link3</a>
+    <a href="#" id="four">link4</a>
+
+    <script>
+        let link4 = console.log(document.getElementById('four')); //task1
+    </script>
+
+    <!-- Задание 2. Используя поиск по имени класса, получите все элементы с классом .one
+    и выведите их в консоль. -->
+    <p class="one">параграф 1</p>
+    <p>параграф</p>
+    <p class="one">параграф 2</p>
+    <h3 class="one">заголовок 1</h3>
+    <h3>заголовок 2</h3>
+    <script>
+        let elementOne = console.log(document.getElementsByClassName('one')); //task2
+    </script>
+
+<!-- Задание 3. Используя поиск по селектору (метод querySelectorAll) найдите только те ссылки с
+классом .card-link, которые находятся в .card-body
+и выведите их в консоль. -->
+<a href="#" class="card-link">Card link</a>
+<a href="#" class="card-link">Another link</a>
+
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+        <p class="card-text">
+            Some quick example text to build on the card title and make up the bulk of the card's
+            content.
+        </p>
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+    </div>
+</div>
+<script>
+    let linksCardBody = console.log(document.querySelectorAll('.card-body .card-link')); //task3
+</script>
+
+<!-- Задание 4. Используя поиск по селектору (метод querySelector) найдите div с атрибутом
+aria-valuenow="50" и выведите его в консоль. -->
+
+<div class="progress">
+    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+
+<script>
+let divValue50 = console.log(document.querySelector('[aria-valuenow="50"]')); //task4
+</script>
+
+ <!-- Задание 5. Выведите содержимое тега title в консоль. -->
+ <script>
+ let titleContent = console.log(document.title); //task5
+ </script>
+</body>
+
+</html>
