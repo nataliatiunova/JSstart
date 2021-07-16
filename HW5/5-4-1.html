@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Задание 1. Отследите когда все теги будут добавлены на страницу (событие
+    DOMContentLoaded) и выведите alert'ом сообщение: "все теги добавлены на страницу". -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            alert("все теги добавлены на страницу");
+        });
+    </script>
+
+ <!-- Задание 2. Дождитесь когда все картинки загрузятся (событие load) и
+    покажите с помощью alert сообщение: "все картинки загружены". -->
+    <img src="https://placeimg.com/1000/1000/animals" alt="">
+    <img src="https://placeimg.com/1000/1000/arch" alt="">
+    <img src="https://placeimg.com/1000/1000/nature" alt="">
+    <img src="https://placeimg.com/1000/1000/people" alt="">
+    <img src="https://placeimg.com/1000/1000/tech" alt="">
+    <img src="https://placeimg.com/1000/1000/tech/grayscale" alt="">
+    <img src="https://placeimg.com/1000/1000/tech/sepia" alt="">
+
+    <script>
+        window.addEventListener('load', function () {
+            alert("все картинки загружены");
+        });
+    </script>
+
+<!-- Задание 3. Сделайте, чтобы по клику по кнопке с классом .btn появлялся
+alert('клик') -->
+    <button>Кнопка</button>
+    <button class="btn">Кнопка с классом btn</button>
+    <button>Кнопка</button>
+
+    <script>
+    let buttonClick = document.querySelector('.btn');
+    buttonClick.addEventListener('click', function() {
+        alert('клик');
+    });
+    </script>
+
+<!-- Задание 4. Сделайте, чтобы при наведении на textarea в консоли
+появлялось сообщение: "вы навели на textarea" -->
+
+    <textarea></textarea>
+
+    <script>
+    let findTextArea = document.querySelector('textarea');
+    findTextArea.addEventListener('mouseover', function() {
+        alert('вы навели на textarea');
+    });
+    </script>
+</body>
+</html>
