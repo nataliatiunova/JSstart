@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <!-- Задание 1. Найдите тег ul. И добавьте ему класс one. 
+    <ul>
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+    </ul>
+    <script>
+        let findTag = document.querySelector('ul');
+        findTag.classList.add('one');
+    </script>
+-->
+<!-- Задание 2. Найдите элемент с классом .nav-link и используя метод toggle из свойства classList
+у элемента, добавьте или уберите класс .active. 
+<ul class="nav">
+    <li class="nav-item">
+        <a class="nav-link active" href="#">Active</a>
+    </li>
+</ul>
+<script>
+    let findNav = document.querySelector('.nav-link');
+    findNav.classList.toggle('active');
+</script>
+-->
+<!-- Задание 3. Найдите элемент с классом .dropdown-menu и удалите этот класс, используя свойство
+classList у элемента, и метод remove(). 
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        Dropdown button
+    </button>
+    <div class="menu dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+</div>
+
+<script>
+    'use strict';
+    let findDmenu = document.querySelector('.dropdown-menu');
+    findDmenu.classList.remove('dropdown-menu');
+</script>
+-->
+
+
+    <!-- Задание 4. Добавьте в div с классом .menu следующую разметку:
+    <a href="#">link</a>
+    используя метод insertAdjacentHTML.
+
+    <script>
+        let divMenu = document.querySelector('.menu'); //используется результат из предыдущей задачи
+        divMenu.insertAdjacentHTML('afterbegin','<a href="#">link</a>');
+    </script>
+-->
+<!-- Задание 5. Выведите в консоль значение атрибутов data-dismiss
+и aria-label с помощью метода getAttribute. -->
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+</button>
+
+<script>
+    let findButton = document.querySelector('button');
+    console.log(findButton.getAttribute('data-dismiss'));
+    console.log(findButton.getAttribute('aria-label'));
+</script>
+
+<!-- Задание 6. Добавьте заголовку атрибут data-one="один" и атрибут
+data-two="два" с помощью метода setAttribute. -->
+<h1>Заголовок</h1>
+
+<script>
+let changeH1 = document.querySelector('h1');
+changeH1.setAttribute('data-one', 'один');
+changeH1.setAttribute('data-two', 'два');
+</script>
+
+<!-- Задание 7. найдите заголовок с id="title" и замените значение id
+на что-то другое. -->
+<article>
+    <h2>title</h2>
+    text
+</article>
+<article>
+    <h2 id="title">title</h2>
+    text
+</article>
+
+<script>
+let findTitle = document.querySelector('title');
+findTitle.id = 'heading';
+</script>
+</body>
+</html>

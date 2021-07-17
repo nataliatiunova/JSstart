@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="https://placeimg.com/100/100/animals" alt="">
+    <img src="https://placeimg.com/100/100/arch" alt="">
+    <img src="https://placeimg.com/100/100/people" alt="">
+
+    <!-- Задание 1. 
+    1. Сохраните в переменную коллекцию с картинками.
+    2. Пробегитесь по этой коллекции с помощью цикла или forEach
+    и выведите каждую картинку в консоль. Выведите в консоль только
+	элементы коллекции, не нужно пытаться сделать, чтобы в консоли
+	появилось изображение. -->
+
+    <script>
+        'use strict';
+        let findImage = document.querySelectorAll('img');
+        findImage.forEach(function (image) {
+            console.log(image);
+        });
+    </script>
+
+<!-- Задание 2.
+1. Сохраните в переменную коллекцию элементов с классом one. Для получения
+элементов используйте метод. getElementsByClassName() 
+2. С помощью цикла переберите эту коллекцию и выведите в консоль название тега.
+-->
+<h3 class="one">Заголовок</h3>
+<a class="one" href="#">ссылка</a>
+<p class="one">параграф</p>
+
+<script>
+    'use strict';
+    let findOne = document.getElementsByClassName('one');
+    for (let i = 0; i < findOne.length; i++) {
+        console.log(findOne[i].tagName);
+    }
+</script>
+
+<!-- 
+Задание 3.
+1. Сохраните в переменную коллекцию с тегами h2, используйте метод getElementsByTagName()
+2. Пробегитесь по этой коллекции с помощью цикла и выведите в консоль значение
+атрибута class, используя свойство className.
+-->
+<h2 class="one lorem">Заголовок 1</h2>
+<h2 class="two ipsum">Заголовок 2</h2>
+<h2 class="three">Заголовок 3</h2>
+
+<script>
+    'use strict';
+    let h2Elements = document.getElementsByTagName('h2');
+    for (let i = 0; i < h2Elements.length; i++) {
+        console.log(h2Elements[i].className);
+    }
+</script>
+
+<!-- 
+Задание 4.
+1. Сохраните в переменную тег div.
+2. Создайте переменную classes, и в нее сохраните значение свойства classList.
+3. C помощью forEach переберите classes и выведите каждый класс в консоль.
+
+<div class="one two three"></div>
+
+<script>
+    'use strict';
+    let div = document.querySelector('div'); //1
+    let classes = div.classList; //2
+    classes.forEach(function (eachClass) {
+        console.log(eachClass);
+    });
+</script>
+-->
+
+
+<!-- Задание 5.
+1. Вам нужно получить этот div.
+2. Затем обратитесь к списку классов и с помощью метода contains()
+проверьте есть ли класс hidden у этого тега.
+ -->
+<div class="product hidden"></div>
+
+<script>
+    'use strict';
+    let div = document.querySelector('div');
+    console.log(div.classList.contains('hidden'));
+</script>
+</body>
+</html>

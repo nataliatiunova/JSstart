@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="one" class="btn">Кнопка 1</button>
+
+    <!-- 
+    Задание 1.
+    1. Получите кнопку и сохраните ее в переменную.
+    2. Назначьте кнопке обработку клика.
+    3. У функции-обработчика клика сделайте параметр event
+    4. При клике из event.target выведите в консоль: id, имя класса (используйте
+    свойство className), текст на кнопке.
+    -->
+
+    <script>
+        'use strict';
+        let button = document.querySelector('button');
+        button.addEventListener('click', function (event) {
+            console.log(event.target.id, event.target.className, event.target.innerText);
+        });
+    </script>
+
+<!-- 
+Задание 2.
+1. Назначьте обработку клика по параграфу, у функции обработчика объявите
+параметр event.
+2. При клике выведите в консоль event.target.classList
+3. Переберите с помощью forEach event.target.classList и выведите каждый класс
+в консоль.
+-->
+<p class="first second third">
+    Lorem ipsum dolor sit.
+</p>
+
+<script>
+    'use strict';
+    let p = document.querySelector('p');
+    p.addEventListener('click', function (event) {
+        console.log(event.target.classList);
+        event.target.classList.forEach(function (klass) {
+            console.log(klass);
+        });
+    });
+</script>
+
+<!-- 
+    Задание 3.
+    1. Сохраните ссылку на div в переменную
+    2. Назначьте div'у обработку клика, у функции-обработчика объявите параметр event.
+    3. При клике из event.target c помощью getAttribute() получите значение
+    каждого атрибута и выведите в консоль.
+    -->
+    <div class="modal fade" 
+    id="exampleModal" 
+    tabindex="-1" 
+    aria-labelledby="exampleModalLabel" 
+    aria-hidden="true">
+   текст
+    </div>
+    <script>
+        'use strict';
+        let div = document.querySelector('div');
+        div.addEventListener('click', function (event) {
+            console.log(event.target.getAttribute('class'));
+            console.log(event.target.getAttribute('id'));
+            console.log(event.target.getAttribute('tabindex'));
+            console.log(event.target.getAttribute('aria-labelledby'));
+            console.log(event.target.getAttribute('aria-hidden'));
+        });
+    </script>
+
+<!-- 
+Задание 4.
+1. Сохраните в переменную ссылку на .product
+2. Назначьте обработку клика по .product, у функции обработчика объявите
+параметр event.
+3. Сделайте, чтобы при клике содержимое .product поменялось на:
+<div>Другой товар</div>
+<div>Другое описание</div>
+для этого вышеописанную разметку пишите в виде строки в innerHTML.
+-->
+<div class="product">
+    <span class="productName">Товар 1</span>
+    Описание товара
+</div>
+
+<script>
+    'use strict';
+    let product = document.querySelector('.product');
+    product.addEventListener('click', function (event) {
+        event.target.innerHTML = "<div>Другой товар</div><div>Другое описание</div>";
+    });
+</script>
+
+<!-- Задание 5. Назначьте обработчик клика по ul и при клике выводите в консоль
+элемент, на котором произошел клик, с помощью event.target, где event - это
+объект события, передаваемый в функцию-обработчик клика. -->
+
+<ul>
+    <li>
+        <button>Кнопка</button>
+    </li>
+    <li>
+        <button>Кнопка</button>
+    </li>
+    <li>
+        <button>Кнопка</button>
+    </li>
+</ul>
+
+
+<script>
+    'use strict';
+    let ul = document.querySelector('ul');
+    ul.addEventListener('click', function (event) {
+        console.log(event.target);
+    });
+</script>
+</body>
+</html>
