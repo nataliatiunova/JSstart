@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//задача 4
+        function sum(a,b) {
+            return a + b;
+        }
+
+        function subtract(a,b) {
+            return a - b;
+        }
+
+        function multiplication(a,b) {
+            return a * b;
+        }
+
+        function division(a,b) {
+            return a / b;
+        }
+//задача 5
+        function mathOperation(arg1, arg2, operation){
+            switch(operation) {
+                case 'sum': return sum(arg1,arg2);
+                
+                case 'subtract' : return subtract(arg1, arg2);
+                
+                case 'multiplication' : return multiplication(arg1,arg2);
+                
+                case 'division' : return division(arg1, arg2);
+               
+            }
+
+        }
+        let x = Math.round(Math.random() * 100);
+        let y = Math.round(Math.random() * 100);
+        console.log(x);
+        console.log(y);
+        //вызов функций для задачи 4
+        console.log(sum(x,y));
+        console.log(subtract(x,y));
+        console.log(multiplication(x,y));
+        console.log(division(x,y));
+        //вызов функций для задачи 5
+        console.log(mathOperation(x, y, 'sum'));
+        console.log(mathOperation(x, y, 'subtract'));
+        console.log(mathOperation(x, y, 'multiplication'));
+        console.log(mathOperation(x, y, 'division'));
+    </script>
+</body>
+</html>
